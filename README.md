@@ -39,7 +39,7 @@ O projeto consiste na resolução de questões que percorrem o conteúdo visto e
 - Vídeo: [Implementação 03]()
 - Autor: [Luiz Gustavo](https://github.com/luiz-gl-campos)
 
-## Problema 4: [Bertown](https://codeforces.com/problemset/problem/118/E)
+## Problema 4: []()
 
 - Nível: Difícil
 - Conteúdo: 
