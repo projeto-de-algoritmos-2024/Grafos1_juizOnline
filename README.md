@@ -43,8 +43,8 @@ O projeto consiste na resolução de questões que percorrem o conteúdo visto e
 
 - Nível: Difícil
 - Conteúdo: 
-- Explicação: [Explicação 04](https://github.com/projeto-de-algoritmos-2024/Grafos1_Codeforces/blob/master/explicacao/explicacao04.md)
-- Implementação: [Código 04](https://github.com/projeto-de-algoritmos-2024/Grafos1_Codeforces/blob/master/codigos/questao04.cpp)
+- Explicação: [Explicação 04](https://github.com/projeto-de-algoritmos-2024/Grafos1_juizOnline/blob/master/explicacao/problema04.md)
+- Implementação: [Código 04](https://github.com/projeto-de-algoritmos-2024/Grafos1_juizOnline/blob/master/codigos/questao04.cpp)
 - Vídeo: [Implementação 04]()
 - Autor: [Luiz Gustavo](https://github.com/luiz-gl-campos)
 
