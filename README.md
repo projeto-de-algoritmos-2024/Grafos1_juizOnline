@@ -34,8 +34,8 @@ O projeto consiste na resolução de questões que percorrem o conteúdo visto e
 
 - Nível: Médio
 - Conteúdo: 
-- Explicação: [Explicação 03](https://github.com/projeto-de-algoritmos-2024/Grafos1_Codeforces/blob/master/explicacao/explicacao03.md)
-- Implementação: [Código 03](https://github.com/projeto-de-algoritmos-2024/Grafos1_Codeforces/blob/master/codigos/questao03.cpp)
+- Explicação: [Explicação 03](https://github.com/projeto-de-algoritmos-2024/Grafos1_juizOnline/blob/master/explicacao/problema03.md)
+- Implementação: [Código 03](https://github.com/projeto-de-algoritmos-2024/Grafos1_juizOnline/blob/master/codigos/questao03.cpp)
 - Vídeo: [Implementação 03]()
 - Autor: [Luiz Gustavo](https://github.com/luiz-gl-campos)
 
