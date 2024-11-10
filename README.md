@@ -12,19 +12,19 @@
 ## Sobre 
 O projeto consiste na resolução de questões que percorrem o conteúdo visto em sala de aula sobre conceitos iniciais de grafos. 
 
-## Problema 1: []()
+## Problema 1: [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/description/)
 
 - Nível: Médio
-- Conteúdo: 
+- Conteúdo: BFS
 - Explicação: [Explicação 01](https://github.com/projeto-de-algoritmos-2024/Grafos1_Codeforces/blob/master/explicacao/explicacao01.md)
 - Implementação: [Código 01](https://github.com/projeto-de-algoritmos-2024/Grafos1_Codeforces/blob/master/codigos/questao01.cpp)
 - Vídeo: [Implementação 01]() 
 - Autor: [Gabriela](https://github.com/heylisten64)
 
-## Problema 2: []()
+## Problema 2: [Cut Off Trees for Golf Event](https://leetcode.com/problems/cut-off-trees-for-golf-event/description/)
 
 - Nível: Difícil
-- Conteúdo: 
+- Conteúdo: BFS
 - Explicação: [Explicação 02](https://github.com/projeto-de-algoritmos-2024/Grafos1_Codeforces/blob/master/explicacao/explicacao02.md)
 - Implementação: [Código 02](https://github.com/projeto-de-algoritmos-2024/Grafos1_Codeforces/blob/master/codigos/questao02.cpp)
 - Vídeo: [Implementação 02]()
