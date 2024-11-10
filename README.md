@@ -30,10 +30,10 @@ O projeto consiste na resolução de questões que percorrem o conteúdo visto e
 - Vídeo: [Implementação 02]()
 - Autor: [Gabriela](https://github.com/heylisten64)
 
-## Problema 3: []()
+## Problema 3: [Dominação Bacteriana](https://judge.beecrowd.com/pt/problems/view/2687)
 
 - Nível: Médio
-- Conteúdo: 
+- Conteúdo: Travessia em grafos (DFS/BFS)
 - Explicação: [Explicação 03](https://github.com/projeto-de-algoritmos-2024/Grafos1_juizOnline/blob/master/explicacao/problema03.md)
 - Implementação: [Código 03](https://github.com/projeto-de-algoritmos-2024/Grafos1_juizOnline/blob/master/codigos/questao03.cpp)
 - Vídeo: [Implementação 03]()
