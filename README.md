@@ -20,7 +20,7 @@ O projeto consiste na resolução de questões que percorrem o conteúdo visto e
 - Conteúdo: BFS
 - Explicação: [Explicação 01](./explicacao/problema01.md)
 - Implementação: [Código 01](./codigos/questao01.cpp)
-- Vídeo: [Implementação 01]()
+- Vídeo: [Implementação 01](https://www.youtube.com/watch?v=ZUTzjxVYrE0)
 - Autor: [Gabriela](https://github.com/heylisten64)
 
 ## Problema 2: [Cut Off Trees for Golf Event](https://leetcode.com/problems/cut-off-trees-for-golf-event/description/)
