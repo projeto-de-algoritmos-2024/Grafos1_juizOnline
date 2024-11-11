@@ -1,18 +1,19 @@
-## beecrowd | 1903
-### Cadeia Alimentar
+## [Chefe](https://judge.beecrowd.com/pt/problems/view/1469)
 
-Na viagem de Bino, ele desenhou algumas cadeias alimentares dos seres de Binox. Porém ele notou que em algumas cadeias, todos os pares de espécies se relacionavam (diretamente ou indiretamente). Ele denominou essas cadeias de Cadeias Boladas.
+Problema de grafos nível 9 da plataforma beecrowd | 1469
 
-Representando a cadeia alimentar como um grafo, todos os pares de espécies (u, v) se relacionam se existe um caminho de u para v OU um caminho de v para u.
+Todos conhecem Iks, a última moda em redes sociais, que fez tanto sucesso que competidores como Facebook e Google+ estão começando a ter dificuldades financeiras. Assim como muitas companhias “.com”, Iks surgiu em uma pequena garagem, mas hoje emprega milhares de pessoas no mundo todo. O sistema de gerência utilizado em Iks é bem diferente do padrão. Por exemplo, não há diretorias ou superintendências. No entanto, como é usual em outras companhias, há uma cadeia (ou melhor, várias cadeias) de comando: uma pessoa pode gerenciar outras pessoas, e pode ser gerenciada por outras pessoas. As figuras abaixo mostra a cadeia de comando para alguns empregados, junto com suas idades.
 
+![problema04](../assets/problema04.jpg)
 
-![img](..\assets\beeCrowd1903.png)
-
-
-Dado uma cadeia alimentar, Bino quer saber se ela é uma Cadeia Bolada ou não.
+Uma pessoa P1 pode gerenciar outra pessoa P2 diretamente (quando P1 é o superior imediato de P2) ou indiretamente (quando P1 gerencia diretamente uma pessoa P3 que gerencia P2 direta ou indiretamente). Por exemplo, na figura (a) acima, Alice gerencia David diretamente e Clara indiretamente. Uma pessoa não gerencia a si própria, nem direta nem indiretamente. Um folclore que apareceu em Wall Street é que Iks é tão bem sucedido porque em sua rede de comando um(a) gerente é sempre mais jovem do que as pessoas que ele(a) gerencia. Como podemos ver na figura acima, isso não é verdade. Mas esse folclore incentivou Iks a desenvolver uma ferramenta para analisar o seu sistema de gerenciamento, e estudar se tem alguma influência no sucesso da empresa. Você foi contratado para trabalhar nessa ferramenta. Dadas a descrição da cadeia de comando na Iks e as idades de seus empregados, escreva um programa que execute uma série de instruções. Instruções podem ser de dois tipos: trocas de gerência e perguntas. Uma instrução de troca de gerência faz dois empregados A e B trocarem suas posições na cadeia de comando. Como exemplo, a figura (b) acima mostra a cadeia de comando resultante quando David e George trocam suas respectivas posições na cadeia de comando. Uma instrução de pergunta identifica um empregado A e deseja saber a idade do mais jovem gerente (direto ou indireto) de A na cadeia de comando. Por exemplo, no cenário da figura (a) acima a idade do(a) gerente mais jovem de Clara é 18 anos; já no cenário da figura (b), a idade do(a) gerente mais jovem de Clara é 21 anos.
 
 ### Entrada
-A entrada consiste em múltiplas linhas. A primeira linha contém dois inteiros N (1 ≤ N ≤ 100000) e M (1 ≤ M ≤ 1000000), representando a quantidade de espécies e o número de relações respectivamente. As próximas M linhas contêm dois inteiros U (1 ≤ U ≤ N) e V (1 ≤ V ≤ N), representando que existe uma relação unidirecional entre U e V.
+A entrada contém vários casos de teste. Cada caso de teste é composto de várias linhas. A primeira linha contém três inteiros N (1 ≤ N ≤ 500), M(0 ≤ M ≤ 60 × 103) e I(1 ≤ I ≤ 500), indicando respectivamente o número de empregados, o número de relações de gerência direta e o número de instruçõoes. Empregados são identificados por números de 1 a N. A segunda linha contém N inteiros Ki(1 ≤ Ki ≤ 100, para 1 ≤ i ≤ N), onde Ki indica a idade do empregado de número i.
+
+Cada uma das M linhas seguintes contém dois inteiros X e Y(1 ≤ X, Y ≤ N, X != Y) , indicando que X gerencia Y diretamente. Seguem-se I linhas, cada uma descrevendo uma instrução. Uma instruçãao de troca de gerência é descrita em uma linha contendo o identificador T seguido de dois inteiros A e B(1 ≤ A,B ≤ N), indicando os dois empregados que devem trocar seus lugares na cadeia de comando. Uma instrução de pergunta é descrita em uma linha contendo o identificador P seguido de um inteiro E(1 ≤ E ≤ N), indicando um empregado. A última instrução será sempre do tipo pergunta.
+
+O final da entrada é determinado por EOF (fim de arquivo).
 
 ### Saída
-Imprima uma linha com a mensagem "Bolada" (sem aspas) se a cadeia for uma Cadeia Bolada, ou "Nao Bolada" caso contrário.
+Para cada instrução de pergunta seu programa deve imprimir uma linha contendo um único inteiro, a idade da pessoa mais jovem que gerencia (direta ou indiretamente) o empregado nomeado na pergunta. Se o empregado nomeado não possui um gerente, imprima o caractere ‘*’ (asterisco).

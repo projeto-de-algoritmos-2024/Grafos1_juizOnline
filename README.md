@@ -41,10 +41,10 @@ O projeto consiste na resolução de questões que percorrem o conteúdo visto e
 - Vídeo: [Implementação 03](https://youtu.be/r3f69XErhME)
 - Autor: [Luiz Gustavo](https://github.com/luiz-gl-campos)
 
-## Problema 4: []()
+## Problema 4: [Chefe](https://judge.beecrowd.com/pt/problems/view/1469)
 
 - Nível: Difícil
-- Conteúdo:
+- Conteúdo: DFS
 - Explicação: [Explicação 04](./explicacao/problema04.md)
 - Implementação: [Código 04](./codigos/questao04.cpp)
 - Vídeo: [Implementação 04]()

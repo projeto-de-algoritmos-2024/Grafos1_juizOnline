@@ -1,62 +1,156 @@
 #include <iostream>
 #include <vector>
+#include <queue>
+#include <string>
+#include <sstream>
+#include <algorithm>
+#include <limits>
 
 using namespace std;
 
-void dfs(int node, vector<vector<int>>& adj, vector<bool>& visited) {
-    visited[node] = true;
-    for (int neighbor : adj[node]) {
-        if (!visited[neighbor]) {
-            dfs(neighbor, adj, visited);
+class Graph {
+private:
+    vector<int> vis;
+    vector<vector<int>> adj;
+    vector<int> ages;
+    vector<int> pos;
+
+public:
+    Graph() {}
+
+    vector<vector<int>>& getAdj() {
+        return adj;
+    }
+
+    vector<int>& getAges() {
+        return ages;
+    }
+
+    vector<int>& getPos() {
+        return pos;
+    }
+
+    vector<int>& getListAdj(int index) {
+        return this->adj[index];
+    }
+
+    void initializeVis(int N) {
+        setVis(N);
+    }
+
+    void setAges(int N) {
+        ages.assign(N, 0);
+    }
+
+    void setVis(int N) {
+        vis.assign(N, 0);
+    }
+
+    void setPos(int N) {
+        pos.assign(N, 0);
+    }
+
+    void setAdj(int M) {
+        adj.assign(500, vector<int>());
+    }
+
+    int depthFirstSearch(int ini, int lowest) {
+        vis[ini] = 1;
+        for (int v : adj[ini]) {
+            if (vis[v] == 0) {
+                if (ages[v] < lowest)
+                    lowest = ages[v];
+                lowest = depthFirstSearch(v, lowest);
+            }
+        }
+        return lowest;
+    }
+};
+
+void initializeGraphData(int N, int M, Graph& graph) {
+    graph.setAges(N);
+    graph.setAdj(M);
+    graph.setVis(N);
+    graph.setPos(N);
+}
+
+void readAjacentList(istream& in, int M, Graph& graph) {
+    for (int i = 0; i < M; i++) {
+        string line;
+        getline(in, line);
+        istringstream iss(line);
+        int from, to;
+        iss >> from >> to;
+        graph.getListAdj(to - 1).push_back(from - 1);
+    }
+}
+
+void readAges(istream& in, int N, Graph& graph) {
+    string line;
+    getline(in, line);
+    istringstream iss(line);
+    for (int i = 0; i < N; i++) {
+        int age;
+        iss >> age;
+        graph.getAges()[i] = age;
+        graph.getPos()[i] = i;
+    }
+}
+
+void swapPlaces(Graph& graph, const string& line) {
+    istringstream iss(line);
+    string command;
+    int vertexOne, vertexTwo;
+    iss >> command >> vertexOne >> vertexTwo;
+
+    swap(graph.getAges()[graph.getPos()[vertexOne - 1]], graph.getAges()[graph.getPos()[vertexTwo - 1]]);
+    swap(graph.getPos()[vertexOne - 1], graph.getPos()[vertexTwo - 1]);
+}
+
+void analyseLowestAge(int N, Graph& graph, const string& line) {
+    istringstream iss(line);
+    string command;
+    int vertex;
+    iss >> command >> vertex;
+
+    if (graph.getAdj()[graph.getPos()[vertex - 1]].empty()) {
+        cout << "*\n";
+    } else {
+        graph.initializeVis(N);
+        int lowest = numeric_limits<int>::max();
+        lowest = graph.depthFirstSearch(graph.getPos()[vertex - 1], lowest);
+        cout << lowest << "\n";
+    }
+}
+
+void operations(istream& in, int N, int I, Graph& graph) {
+    for (int i = 0; i < I; i++) {
+        string line;
+        getline(in, line);
+        if (line[0] == 'P') {
+            analyseLowestAge(N, graph, line);
+        } else {
+            swapPlaces(graph, line);
         }
     }
 }
 
-bool isStronglyConnected(int n, vector<vector<int>>& adj, vector<vector<int>>& adjT) {
-    vector<bool> visited(n + 1, false);
-
-    // Realiza DFS a partir do nó 1 no grafo original
-    dfs(1, adj, visited);
-
-    // Verifica se todos os nós foram visitados
-    for (int i = 1; i <= n; ++i) {
-        if (!visited[i]) return false;
-    }
-
-    // Reinicia o vetor de visitados para o grafo transposto
-    fill(visited.begin(), visited.end(), false);
-
-    // Realiza DFS a partir do nó 1 no grafo transposto
-    dfs(1, adjT, visited);
-
-    // Verifica se todos os nós foram visitados no grafo transposto
-    for (int i = 1; i <= n; ++i) {
-        if (!visited[i]) return false;
-    }
-
-    return true;
-}
-
 int main() {
-    int n, m;
-    cin >> n >> m;
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-    vector<vector<int>> adj(n + 1);
-    vector<vector<int>> adjT(n + 1);
+    int N, M, I;
+    Graph graph;
 
-    // Lê as arestas e constrói o grafo e o grafo transposto
-    for (int i = 0; i < m; ++i) {
-        int u, v;
-        cin >> u >> v;
-        adj[u].push_back(v);    // Grafo original
-        adjT[v].push_back(u);    // Grafo transposto
-    }
+    string line;
+    while (getline(cin, line)) {
+        istringstream iss(line);
+        iss >> N >> M >> I;
 
-    // Verifica se o grafo é fortemente conexo
-    if (isStronglyConnected(n, adj, adjT)) {
-        cout << "Bolada" << endl;
-    } else {
-        cout << "Nao Bolada" << endl;
+        initializeGraphData(N, M, graph);
+        readAges(cin, N, graph);
+        readAjacentList(cin, M, graph);
+        operations(cin, N, I, graph);
     }
 
     return 0;
