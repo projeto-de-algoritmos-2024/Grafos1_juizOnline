@@ -23,13 +23,13 @@ O projeto consiste na resolução de questões que percorrem o conteúdo visto e
 - Vídeo: [Implementação 01](https://www.youtube.com/watch?v=ZUTzjxVYrE0)
 - Autor: [Gabriela](https://github.com/heylisten64)
 
-## Problema 2: [Cut Off Trees for Golf Event](https://leetcode.com/problems/cut-off-trees-for-golf-event/description/)
+## Problema 2: [Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/description/)
 
 - Nível: Difícil
 - Conteúdo: BFS
 - Explicação: [Explicação 02](./explicacao/problema02.md)
 - Implementação: [Código 02](./codigos/questao02.cpp)
-- Vídeo: [Implementação 02]()
+- Vídeo: [Implementação 02](https://www.youtube.com/watch?v=UQg5omL45bc)
 - Autor: [Gabriela](https://github.com/heylisten64)
 
 ## Problema 3: [Dominação Bacteriana](https://judge.beecrowd.com/pt/problems/view/2687)
