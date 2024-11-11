@@ -35,10 +35,10 @@ O projeto consiste na resolução de questões que percorrem o conteúdo visto e
 ## Problema 3: [Dominação Bacteriana](https://judge.beecrowd.com/pt/problems/view/2687)
 
 - Nível: Médio
-- Conteúdo: Travessia em grafos (DFS/BFS)
+- Conteúdo: BFS
 - Explicação: [Explicação 03](./explicacao/problema03.md)
 - Implementação: [Código 03](./codigos/questao03.cpp)
-- Vídeo: [Implementação 03]()
+- Vídeo: [Implementação 03](https://youtu.be/r3f69XErhME)
 - Autor: [Luiz Gustavo](https://github.com/luiz-gl-campos)
 
 ## Problema 4: []()
