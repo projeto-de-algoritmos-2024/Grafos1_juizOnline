@@ -47,7 +47,7 @@ O projeto consiste na resolução de questões que percorrem o conteúdo visto e
 - Conteúdo: DFS
 - Explicação: [Explicação 04](./explicacao/problema04.md)
 - Implementação: [Código 04](./codigos/questao04.cpp)
-- Vídeo: [Implementação 04]()
+- Vídeo: [Implementação 04](https://youtu.be/RKw81ofJUuQ)
 - Autor: [Luiz Gustavo](https://github.com/luiz-gl-campos)
 
 <!--
